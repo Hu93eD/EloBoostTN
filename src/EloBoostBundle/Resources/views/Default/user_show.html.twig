@@ -1,0 +1,18 @@
+<script src="{{ asset('scripts/jquery.js') }}">
+</script>
+<table border="0">
+    <tr>
+    <th>Email Address</th>
+    <th>Bank Account</th>
+    <th>Phone Number</th>
+    <th>Manage</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.emailAddress  }}</td>
+        <td>{{ user.bankCC }}</td>
+        <td>{{ user.phoneNumber }}</td>
+        <td><a href="{{ path('user_update', {'idEncrypted': user.id | urlencrypt }) }}">E</a><a id="Delete" href="{{ path('user_delete', {'idEncrypted':  user.id |urlencrypt}) }}" onclick="return confirm('Are you sure ?');">D</a></td>
+    </tr>
+    {% endfor %}
+</table>

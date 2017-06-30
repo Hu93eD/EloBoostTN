@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <title>Testing Purpose</title>
+    <script src="{{ asset('scripts/bootstrap.js') }}"></script>
+    <script src="{{ asset('scripts/jquery.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            function looop(){
+            var StartLP = $( "#startfromLP" ).val();
+            console.log("StartLP : "+StartLP);
+                $( "#endswithLP" ).each(function() {
+                    console.log($("#endswithLP").val());
+                });}
+            $("#startfromLP").change(looop());
+        })
+    </script>
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row"><br><br>
+        <div class="col-md-offset-4">
+        <div class="col-md-2">
+        <select class="form-control" id="startfromLP">
+            <option value="1">0-20LP</option>
+            <option value="2">20-40LP</option>
+            <option value="3">40-60LP</option>
+            <option value="4">60-80LP</option>
+            <option value="5">80-100LP</option>
+        </select>
+        </div>
+            <div class="col-md-2">
+            <select class="form-control" id="startfromTier">
+                <option value="1">Bronze</option>
+                <option value="2">Silver</option>
+                <option value="3">Gold</option>
+            </select>
+            </div>
+            <div class="col-md-2">
+                <select class="form-control" id="startfromdiv">
+                    <option value="5">Division V</option>
+                    <option value="4">Division IV</option>
+                    <option value="3">Division III</option>
+                    <option value="2">Division II</option>
+                    <option value="1">Division I</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-offset-4">
+            <div class="col-md-2">
+                <select class="form-control" id="endswithLP">
+                    <option value="1">0-20LP</option>
+                    <option value="2">20-40LP</option>
+                    <option value="3">40-60LP</option>
+                    <option value="4">60-80LP</option>
+                    <option value="5">80-100LP</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select class="form-control" id="endswithtier">
+                    <option value="1">Bronze</option>
+                    <option value="2">Silver</option>
+                    <option selected value="3">Gold</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select class="form-control" id="endswithdiv">
+                    <option value="5">Division V</option>
+                    <option value="4">Division IV</option>
+                    <option value="3">Division III</option>
+                    <option value="2">Division II</option>
+                    <option selected value="1">Division I</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

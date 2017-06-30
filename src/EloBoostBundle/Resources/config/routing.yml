@@ -1,0 +1,87 @@
+elo_boost_homepage:
+    path:     /
+    defaults: { _controller: EloBoostBundle:Default:index }
+elo_boost_boost:
+    path:     /boost
+    defaults: { _controller: EloBoostBundle:Boost:addBoost }
+payment_verify:
+    path:     /verify
+    defaults: { _controller: EloBoostBundle:Verify:firstStep}
+payment_verifyRP:
+    path:     /verifyRP
+    defaults: { _controller: EloBoostBundle:RP:Verify}
+RPPuchase_add_account:
+    path:     /RPPurchase/{amount}
+    defaults: { _controller: EloBoostBundle:RP:Purchase}
+RPPuchase_add_user:
+    path:     /RPPurchase/user/{EncryptedAccountId}/{EncryptedRPPurchaseEntity}
+    defaults: { _controller: EloBoostBundle:RP:UserAdd}
+payment_verify2:
+    path:     /verify2/{boost}
+    defaults: { _controller: EloBoostBundle:Verify:secondStep}
+user_add:
+    path:     /user/new/{BoostCodeEncrypted}
+    defaults: { _controller: EloBoostBundle:User:addUser}
+user_update:
+    path:     /user/update/{idEncrypted}
+    defaults: { _controller: EloBoostBundle:User:updateUser}
+user_show:
+    path:     /user
+    defaults: {_controller: EloBoostBundle:User:showUser}
+user_delete:
+    path:     /user/delete/{idEncrypted}
+    defaults: {_controller: EloBoostBundle:User:delete}
+admin_homepage:
+    path:     /admin/dashboard
+    defaults: { _controller: EloBoostBundle:admin:index}
+admin_boosters_show:
+    path:     /admin/boosters
+    defaults: { _controller: EloBoostBundle:admin:showBoosters}
+admin_boosts_show:
+    path:     /admin/boosts
+    defaults: { _controller: EloBoostBundle:admin:showBoosts}
+admin_transactions_show:
+    path:     /admin/transactions/
+    defaults: { _controller: EloBoostBundle:admin:showTransactions}
+admin_users:
+    path:     /admin/users
+    defaults: { _controller: EloBoostBundle:admin:showUsers}
+admin_RP:
+    path:     /admin/RP
+    defaults: { _controller: EloBoostBundle:admin:showRP}
+admin_Transactions_accept:
+    path:     /admin/accept/{EncryptedTransactionID}
+    defaults: { _controller: EloBoostBundle:admin:acceptTransaction}
+admin_Transactions_refuse:
+    path:     /admin/refuse/{EncryptedTransactionID}
+    defaults: { _controller: EloBoostBundle:admin:refuseTransaction}
+admin_boost_delete:
+    path:     /admin/boosts/{id}
+    defaults: { _controller: EloBoostBundle:admin:deleteboost}
+admin_transaction_false:
+    path:     /admin/transactions/false/{transactionid}
+    defaults: { _controller: EloBoostBundle:admin:falseTransaction}
+admin_transaction_archive:
+    path:     /admin/transactions/archive/{id}
+    defaults: { _controller: EloBoostBundle:admin:archiveTransaction}
+admin_transaction_unarchive:
+    path:     /admin/transactions/unarchive/{id}
+    defaults: { _controller: EloBoostBundle:admin:unarchiveTransaction}
+admin_boost_show_single:
+    path:     /admin/boost/{boostcode}
+    defaults: { _controller: EloBoostBundle:admin:showsingleboost}
+admin_staff_add:
+    path:     /admin/addstaff
+    defaults: { _controller: EloBoostBundle:admin:addStaff}
+admin_staff_email:
+    path:     /admin/invitstaff
+    defaults: { _controller: EloBoostBundle:admin:invitStaff}
+admin_stats:
+    path:     /admin/stats
+    defaults: { _controller: EloBoostBundle:admin:statics}
+admin_account_show:
+    path:     /admin/accounts
+    defaults: { _controller: EloBoostBundle:admin:showAccount}
+admin_account_show_single:
+    path:     /admin/account/{AccountID}
+    defaults: { _controller: EloBoostBundle:admin:showSingleAccount}

@@ -1,0 +1,4 @@
+services:
+#    elo_boost.example:
+#        class: EloBoostBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
